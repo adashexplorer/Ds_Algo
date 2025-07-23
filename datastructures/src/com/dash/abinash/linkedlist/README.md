@@ -31,6 +31,9 @@
 | ✅ Practical Use Cases       | Stack, basic queues        | LRU cache, browser history   | Round-robin scheduling, buffers | Playlist loops, cyclic deques | Redis, real-time DB indexing |
 
 
+----
+
+ 
 > ℹ️ **Note**:
 > - Skip List is typically used in **advanced systems** that require **fast range lookups** and **concurrent access**, like **Redis**, **LevelDB**, or **Java's ConcurrentSkipListMap**.
 > - Skip Lists maintain multiple "levels" for faster access (logarithmic).
