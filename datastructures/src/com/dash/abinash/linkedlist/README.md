@@ -40,3 +40,18 @@
 > - Circular Lists help **avoid null checks** and support **infinite iteration**.
 > - Doubly Linked Lists are heavier but flexible for **bidirectional navigation**.
 > - Singly Linked Lists are best when space is limited and direction doesn't matter.
+
+
+## Singly LinkedList -
+> - A singly LinkedList consists of `nodes` where each node contains a `data` field and a `reference` to the next node in the LinkedList. This
+> structure allows nodes to by dynamically linked together forming a chain like sequence.
+> - The next of the last node is `Null` which indicates the end of the list
+> - It supports efficient `insertion` and `deletion` operations.
+
+
+
+## Doubly LinkedList -
+> - A doubly LinkedList consists of nodes where each node contains a `data` field, a `reference / pointer` to the next node (`next`) and a `reference / pointer` to the previous node (`prev`)
+> - The next of the last node and the previous of first node is `Null`.
+> - It supports efficient `insertion` and `deletion` operations than `Singly LinkedList`. 
+> - Also, it allows to have an efficient traversal of list in both directions.
