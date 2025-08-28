@@ -6,10 +6,10 @@ package com.dash.abinash.linkedlist.nodes;
 public class SinglyNode<T> {
 
     // SinglyNode data
-    T t;
+    public T t;
 
     // Address of the next node
-    SinglyNode<T> next;
+    public SinglyNode<T> next;
 
     /*
        SinglyNode constructor contains following
@@ -17,7 +17,7 @@ public class SinglyNode<T> {
           - Address of the next node. For an individual isolated node, the address to the next node
             is always `Null` until the link is established to another node.
      */
-    SinglyNode(T t) {
+    public SinglyNode(T t) {
         this.t = t;
         next = null;
     }

@@ -1,64 +1,192 @@
 package com.dash.abinash.linkedlist;
 
+import com.dash.abinash.linkedlist.boilerplate.GenericLinkedList;
+import com.dash.abinash.linkedlist.boilerplate.SpecOpsLinkedList;
 import com.dash.abinash.linkedlist.nodes.SinglyNode;
 
 /**
  * A Singly Linked List implementation which contains various functionalities (basic, intermediate & advanced)
- * @author abinash
+ * @author Abinash Dash (adashexplorer)
  * @param <T>
  */
-public class SinglyLinkedList<T> {
+public class SinglyLinkedList<T>
+        extends SpecOpsLinkedList<T>
+        implements GenericLinkedList<T> {
 
-
-    /**
-     *    CREATE OPERATIONS
-     *       - Add node to the front of the Singly LinkedList
-     *       - Add node to the end of the Singly LinkedList
-     *       - Add node to the nth node (at a specific index) of the Singly LinkedList
-     *       - Add node to the middle of the Singly LinkedList
-     *       - Add a node after a specific node in a Singly LinkedList
-     *       - Add a node before a specific node in a Singly LinkedList (DLL / CDLL only)
-     */
-
-
+    SinglyNode<T> head;
 
     /**
-     *    DELETE OPERATIONS
-     *        - Delete node from the start of the Singly LinkedList
-     *        - Delete node from the end of the Singly LinkedList
-     *        - Delete node from nth node (at a specific index) of the Singly LinkedList
-     *        - Delete node from the middle of the Singly LinkedList
-     *        - Delete node after a specific node in a Singly LinkedList
-     *        - Delete node before a specific node in a Singly LinkedList (DLL / CDLL only)
-     *        - Delete entire Singly LinkedList
-     */
-
-
-    /**
-     *    UPDATE OPERATIONS
-     *        - Update node at the front of the Singly LinkedList
-     *        - Update node at the end of the Singly LinkedList
-     *        - Update node at a specific index
-     *        - Update a specific node with a new node
      *
+     * @param t
+     * @return
      */
+    @Override
+    public boolean addToFront(T t) {
+        return false;
+    }
+
+    @Override
+    public boolean addToEnd(T t) {
+
+        return false;
+    }
+
+    @Override
+    public int addAtIndex(int n, T t) {
 
 
-    /**
-     *    READ OPERATIONS
-     *        - Traverse all the nodes of the Singly LinkedList from forward direction
-     *        - Traverse all the nodes of the Singly LinkedList from backward direction (DLL / CDLL)
-     *        - Print all values from head to tail of a Singly LinkedList
-     */
+        SinglyNode<T> node = new SinglyNode<>(t);
 
+        SinglyNode<T> pointer = head;
+        int counter = 0;
+        while (pointer.next != null) {
+            counter ++;
+            if (counter == n) {
+                node.next = pointer.next;
+                pointer.next = node;
+            }
+        }
+        return 0;
+    }
 
-    /**
-     *    SEARCH OPERATIONS
-     *        - Search en element in a Singly LinkedList
-     *        - Search an element in a Singly LinkedList at a specific index / Find nth node from end of a Singly LinkedList
-     *        - Find middle node in a Singly LinkedList
-     *        - Find index of a specific node in a Singly LinkedList
-     */
+    @Override
+    public boolean addToMiddle(T t) {
+        return false;
+    }
+
+    @Override
+    public boolean addAfter(T t) {
+        return false;
+    }
+
+    @Override
+    public boolean deleteFromFront() {
+        return false;
+    }
+
+    @Override
+    public boolean deleteFromEnd() {
+        return false;
+    }
+
+    @Override
+    public int deleteFromIndex(int n) {
+        return 0;
+    }
+
+    @Override
+    public boolean deleteFromMiddle() {
+        return false;
+    }
+
+    @Override
+    public boolean deleteAfter(T t) {
+        return false;
+    }
+
+    @Override
+    public boolean clean() {
+        return false;
+    }
+
+    @Override
+    public boolean updateAtFront(T t) {
+        return false;
+    }
+
+    @Override
+    public boolean updateAtEnd(T t) {
+        return false;
+    }
+
+    @Override
+    public int updateAtIndex(int n) {
+        return 0;
+    }
+
+    @Override
+    public boolean updateNodeData(T t) {
+        return false;
+    }
+
+    @Override
+    public void readFromFront() {
+
+        while (head != null) {
+            System.out.println(head.t);
+            head = head.next;
+        }
+    }
+
+    @Override
+    public int find(T t) {
+        return 0;
+    }
+
+    @Override
+    public int findAt(int n) {
+        return 0;
+    }
+
+    @Override
+    public int findMiddle() {
+        return 0;
+    }
+
+    @Override
+    public int indexOf(T t) {
+        return 0;
+    }
+
+    @Override
+    public int size() {
+        return 0;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return false;
+    }
+
+    @Override
+    public void reverse() {
+
+    }
+
+    @Override
+    public boolean isLoopDetected() {
+        return false;
+    }
+
+    @Override
+    public void removeDuplicates() {
+
+    }
+
+    @Override
+    public void sort(boolean order) {
+
+    }
+
+    @Override
+    public void compare() {
+
+    }
+
+    @Override
+    public boolean addBefore(T t) {
+        return false;
+    }
+
+    @Override
+    public boolean deleteBefore(T t) {
+        return false;
+    }
+
+    @Override
+    public void readFromEnd() {
+
+    }
 
 
     /**
