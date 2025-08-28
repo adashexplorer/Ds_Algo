@@ -8,9 +8,9 @@
 - [Comparison](#2-types-of-linked-list)
 
 ### Types of LinkedList -
-- `Singly Linked List`
+- `Singly Linked List` & `Singly Linked List with tail`
 - `Doubly Linked List`
-- `Circular Singly Linked List`
+- `Circular Singly Linked List` &
 - `Circular Doubly Linked List`
 - `Skip List` (Advanced category)
 
@@ -55,10 +55,12 @@
 - Dynamic size; does not require pre-allocated memory.
 
 ### ⚙️ Common Operations:
-- **Insertion at head/tail**: O(1) / O(n)
+- **Insertion at head/tail**: `O(1) / O(n)`
+   - If `Singly Linked List with tail pointer` is used, then for addition Complexity is `O(1)`
 - **Deletion from head/tail**: O(1) / O(n)
-- **Search by value**: O(n)
-- **Traversal**: O(n)
+   - If `Singly Linked List with tail pointer` is used, then for deletion complexity is `O(1)`
+- **Search by value**: O(n) **[Traverse is unavoidable]**
+- **Traversal**: O(n) **[Traverse is unavoidable]**
 
 ### 📌 Use Cases:
 - Implementing stacks (LIFO)
@@ -165,3 +167,81 @@
    [Tail] ←─────────────── circular back to ───────────────→ [Head]
 ```
 
+
+## Common algorithmic patterns to know before solving LinkedList questions -
+
+### 🔹 Beginner Patterns
+1. #### Traversal (Both iterative & recursive)
+    - Iterating node by node until `NULL`
+    - Basics pattern for everything.
+    - Problems : 
+         - Print List
+         - Count Length
+         - Find element etc etc
+2. #### Insertion / Deletion by position
+    - Handling special cases : head, middle, end
+    - Problems : 
+         - Insert at index, delete N-th node, etc
+3. #### Dummy Node (Sentinel Technique)
+    - Create a temporary node before head to simplify edge cases (like deleting head)
+    - Very common in Leet-Code problems
+    - Problems: remove duplicates, remove N-th from end etc.
+
+### 🔹 Intermediate Patterns
+1. #### Two Pointer technique (Same speed)
+    - Slow & fast both move 1 step, but start at different positions.
+    - Problems : find intersection node of two linked lists, merge point etc
+2. #### Fast and Slow Pointer (Tortoise & Hare)
+    - Slow moves 1 step, fast moves 2 steps
+    - Detect cycle (**Floyd's algorithm**), find middle node
+    - Also used for Cycle length & cycle entry point <br>
+      many more
+3. #### Nth from end using two pointers
+    - Move fast N steps, then move fast and slow together until fast reaches `NULL`.
+    - Problems: remove N-th node from end, find N-th node from end
+4. #### Reversal Patterns
+    - Iterative reversal using 3 pointers (prev, curr, next)
+    - Recursive reversal.
+    - Problems : Reverse whole list, reverse sublist, reverse in K-groups
+5. #### Merge technique 
+    - Merge two sorted linked lists like merge sort.
+    - Problems: Merge K sorted lists, sort list using merge sort
+
+### 🔹 Advanced Patterns
+1. #### Cycle problems variations
+    - Detect Cycle
+    - Find start of Cycle
+    - Find Cycle length
+2. #### In-place reordering / Splitting
+    - Find middle, split list, reverse one part, then merge.
+    - Problems : Reorder list, check if Palindrome
+3. #### Partitioning 
+    - Rearranging nodes into two buckets and then joining.
+    - Problems: Partition list around value x.
+4. #### Skip/Jump Pointers
+    - When skipping nodes (like reverse alternate nodes, skip duplicates).
+5. #### Dummy Head + Tail Pointers for Complex Restructuring
+    - When rebuilding a list while traversing original.
+    - Problems : Odd-even list, remove elements with value
+6. #### LinkedList + Hashing
+    - Use HashSet or map to track visited nodes.
+    - Problems: Detect cycle (Alternative), clone list with random pointer.
+7. #### Linked List + Divide & Conquer
+    - Convert Sorted List to BST
+    - Sort List using merge sort
+8. #### Linked List with random pointer
+    - Deep copy using Hashmap or interleaving trick.
+    - Rare yet famous (`LeetCode 138`)
+9. #### Skip / Alternative Nodes
+    - Problems like `reverse alternate K nodes`, `Skip M delete N`
+10. #### Flattening multi-level Linked List
+    - Each node has `next` and `child  (nested lists)
+    - Flattening can use recursion or a stack.
+11. #### Linked List + Arithmetic
+    - Add 2 numbers represented as Linked Lists (Leet-code 2 & 445).
+    - Requires handling carry, reversal or stacks
+12. #### Special Restructuring
+    - Odd-even linked lists
+    - Group nodes in special ways
+
+# Almost every LinkedList problem is just: <br> Traversal + (Two Pointers OR Reversal OR Merge OR Hashing)
