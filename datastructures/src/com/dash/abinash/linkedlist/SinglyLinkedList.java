@@ -6,6 +6,7 @@ import com.dash.abinash.linkedlist.nodes.SinglyNode;
 
 /**
  * A Singly Linked List implementation which contains various functionalities (basic, intermediate & advanced)
+ * Need to add more details.
  * @author Abinash Dash (adashexplorer)
  * @param <T>
  */
