@@ -30,7 +30,6 @@ A **comprehensive guide** to searching algorithms for interview preparation, ran
     - Search in infinite / unbounded array
     - Binary Search on Answer (parametric search)
 - **Fibonacci Searching**
-- **Best First Searching**
 - **Meta Binary Search**
 - **Hash Table Search** – Avg O(1), worst O(n).
 - **DFS (Depth First Search)** – Graph/Tree search.
@@ -66,6 +65,7 @@ A **comprehensive guide** to searching algorithms for interview preparation, ran
 - **Balanced BSTs (AVL, Red-Black Tree)** – Guaranteed O(log n).
 - **B-Trees, B+ Trees** – Used in databases & filesystems.
 - **DFS & BFS Variants** – Cycle detection, pathfinding, connectivity.
+- - **Best First Searching (BeFS)** Graph based searching (Heuristic-driven graph search algorithm)
 - **Bidirectional Search** – Efficient shortest path search between two nodes.
 
 ---
@@ -208,4 +208,7 @@ Consider a given array `arr[] = {2,5,8,12,16,23,38,56,72,91}` and the target is 
 * `Optimization problems & competitive programming` — Solve boundary-value challenges by narrowing search space.
 * `Advanced data structures` — Binary search trees, self-balancing BSTs, and fractional cascading rely on search logic.
 
+
+
+## Fibonacci Search
 
